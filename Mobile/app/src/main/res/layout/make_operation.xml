@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/Layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F8F8">
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="120dp"
+        android:layout_marginTop="6dp"
+        android:layout_height="120dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/img" />
+
+
+    <RelativeLayout
+        android:id="@+id/part2"
+        android:layout_width="340dp"
+        android:layout_height="360dp"
+        android:layout_below="@id/img"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/for_layout"
+        android:elevation="8dp">
+
+        <TextView
+            android:id="@+id/title2"
+            android:layout_width="320dp"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/main"
+            android:elevation="4dp"
+            android:enabled="false"
+            android:gravity="center"
+            android:text="Make an operation"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="360dp"
+            android:layout_below="@id/title2">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="320dp"
+                android:layout_height="36dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dp"
+                android:elevation="4dp"
+                android:enabled="false"
+                android:gravity="center"
+                android:text="Please select the operation type, the amount\n then type a description and validate"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/balance"
+                android:layout_width="320dp"
+                android:layout_height="36dp"
+                android:layout_below="@id/title"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dp"
+                android:elevation="4dp"
+                android:enabled="false"
+                android:gravity="center"
+                android:text=""
+                android:textAllCaps="false"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/operations"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/balance"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <RadioButton
+                    android:id="@+id/debit"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                    android:text="Debit"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/credit"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                    android:text="Credit"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/transfer"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                    android:text="Transfer"
+                    android:textStyle="bold" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/amountText"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_below="@id/operations"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="4dp"
+                android:gravity="center"
+                android:text="The amount :"
+                android:textColor="#000000"
+                android:textSize="24dp" />
+
+            <EditText
+                android:id="@+id/amount"
+                android:layout_width="320dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/amountText"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/field"
+                android:elevation="2dp"
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:selectAllOnFocus="true"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/descriptionText"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_below="@id/amount"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="4dp"
+                android:gravity="center"
+                android:text="Description :"
+                android:textColor="#000000"
+                android:textSize="24dp" />
+
+            <EditText
+                android:id="@+id/description"
+                android:layout_width="320dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/descriptionText"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/field"
+                android:elevation="2dp"
+                android:gravity="center"
+                android:inputType="text"
+                android:selectAllOnFocus="true"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/perform"
+                android:layout_width="260dp"
+                android:layout_height="34dp"
+                android:layout_below="@id/description"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/black"
+                android:elevation="4dp"
+                android:gravity="center"
+                android:text="Validate"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
